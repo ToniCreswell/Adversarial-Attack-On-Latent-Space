@@ -117,7 +117,7 @@ def eval_results(vae, classer, deltaZ, testLoader, exDir):
 		#save a difference images
 		save_image(torch.abs(xSwap.data - recX.data), join(exDir, label+'_DX.png'))
 
-def inception_score(vae, classer, deltaZ, testLoader, exDir):
+def inception_score(vae, classer, deltaZ, testLoader, exDir): #not actual inception score
 	'print calc inception score..'
 	vae.eval()
 	classer.eval()
@@ -306,8 +306,7 @@ if __name__=='__main__':
 			optimizer_DZ.zero_grad()
 			z = vae.re_param(outMu, outLogVar)
 			zSwap = z + torch.mul((2. * y - 1.), deltaZ) #if y=0 z - delta_z, if y=1 z + delta_z
-			xSwap = vae.decode(zSwap) #decode and classify  #### DETACH? cause update VAE at the bottom!!!!!!!! <<<<<<<<
-			predY = classer(xSwap)
+			xSwap = vae.decode(zSwap) #decode and classify  
 			switchedLabels = 1 - y  #classification loss with new labels + PENALTY L2 on the deltaZ
 			regTerm = torch.norm(deltaZ, p=opts.p)
 			deltaZLoss = bce(predY, switchedLabels).mean() + opts.rho * regTerm
