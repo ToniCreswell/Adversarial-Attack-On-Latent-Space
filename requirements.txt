@@ -5,7 +5,7 @@ chardet==3.0.4
 contextlib2==0.5.5
 cycler==0.9.0
 Cython==0.23
-Django==1.8.6
+Django==1.11.29
 django-extensions==1.5.9
 django-mongodb-engine==0.6.0
 djangotoolbox==1.8.0
