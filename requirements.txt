@@ -13,7 +13,7 @@ funcsigs==0.4
 google==1.9.3
 Google-Search-API==1.1.13
 idna==2.5
-Jinja2==2.8
+Jinja2==2.11.3
 Lasagne==0.2.dev1
 MarkupSafe==0.23
 matplotlib==1.4.1
