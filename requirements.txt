@@ -39,7 +39,7 @@ six==1.10.0
 stevedore==1.10.0
 -e git://github.com/Theano/Theano.git@63990436c98f107cf120f3578021a5d259ecf352#egg=Theano
 Unidecode==0.4.21
-urllib3==1.21.1
+urllib3==1.26.5
 vboxapi==1.0
 vcrpy==1.11.1
 virtualenv==13.1.0
