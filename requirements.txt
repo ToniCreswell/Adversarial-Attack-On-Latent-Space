@@ -1,5 +1,5 @@
 beautifulsoup4==4.6.0
-bottle==0.12.9
+bottle==0.12.20
 certifi==2017.4.17
 chardet==3.0.4
 contextlib2==0.5.5
